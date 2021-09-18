@@ -4,7 +4,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: var(--support-darker);
   text-align: left;
   background-color: #fff;
   font-family: 'PT Sans', sans-serif;
@@ -30,6 +30,11 @@ a {
   text-decoration: none;
 }
 
+button {
+  background: none;
+  border: 0;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -41,6 +46,9 @@ a {
   --primary-dark: rgba(255, 255, 255, 0);
   --primary-red: #ef4035;
   --primary-hover-blue: #3d96f7;
+  --text-light: #c7c7c7;
   --text: #666666;
   --text-dark: #333333;
+  --support-dark: #343a40;
+  --support-darker: #212529;
 }

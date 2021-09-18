@@ -1,0 +1,135 @@
+.container {
+  position: sticky;
+  right: 0;
+  left: 0;
+  top: -1px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  background-color: var(--support-dark);
+  padding: 0.5rem 1rem;
+
+  z-index: 1030;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 80vw;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  z-index: 2;
+
+  @media (max-width: 1450px) {
+    max-width: 100vw;
+  }
+
+  @media (max-width: 980px) {
+    max-width: 80vw;
+
+    flex-direction: column;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  width: 100%;
+  max-width: 950px;
+
+  a {
+    color: var(--primary-white);
+    text-transform: uppercase;
+
+    transition: color 0.2s ease-in;
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: var(--primary-blue);
+
+      height: 3px;
+      width: 100%;
+
+      transform: scaleX(0);
+
+      transition: transform 0.2s ease-in;
+    }
+
+    &:hover {
+      color: var(--text-light);
+
+      &::before {
+        transform: scaleX(1);
+      }
+    }
+
+    @media (max-width: 1230px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 1230px) {
+    max-width: 850px;
+  }
+
+  @media (max-width: 980px) {
+    flex-direction: column;
+    align-items: flex-end;
+    height: 220px;
+    overflow: hidden;
+
+    transition: height 0.35s ease;
+
+    &.collapsed {
+      height: 0;
+    }
+  }
+}
+
+.logoButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (min-width: 980px) {
+    max-width: 180px;
+  }
+}
+
+.openMenuButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.3rem;
+  border: 1px solid var(--text-dark);
+  border-radius: 4px;
+
+  transition: border 0.2s ease-in;
+
+  > svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--primary-white);
+  }
+
+  &:hover {
+    border-color: var(--primary-hover-blue);
+  }
+
+  @media (min-width: 980px) {
+    display: none;
+  }
+}
