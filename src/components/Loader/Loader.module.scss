@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.elementOut {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 6px solid var(--primary-white);
+    border-color: var(--primary-blue) transparent var(--primary-blue)
+      transparent;
+    animation: lds-dual-ring 0.8s linear infinite;
+  }
+
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.elementIn {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  &::after {
+    content: ' ';
+    display: block;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 6px solid var(--primary-white);
+    border-color: var(--primary-hover-blue) transparent
+      var(--primary-hover-blue) transparent;
+    animation: lds-dual-ring-in 0.8s linear infinite;
+  }
+
+  @keyframes lds-dual-ring-in {
+    0% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+}
