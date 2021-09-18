@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "About",
+      "path": "/about"
+    },
+    {
+      "name": "Abilities",
+      "path": "/abilities"
+    },
+    {
+      "name": "Timeline",
+      "path": "/timeline"
+    },
+    {
+      "name": "Projects",
+      "path": "/projects"
+    },
+    {
+      "name": "Networkings",
+      "path": "/networkings"
+    },
+    {
+      "name": "Contact",
+      "path": null
+    }
+  ]
+}
