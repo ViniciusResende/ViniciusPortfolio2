@@ -11,6 +11,15 @@
   background-size: cover;
 }
 
+.particlesContainer {
+  display: block;
+  box-sizing: border-box;
+
+  @media (max-width: 980px) {
+    display: none;
+  }
+}
+
 .main {
   padding: 5rem 0;
   flex: 1;
@@ -18,6 +27,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  z-index: 2;
 }
 
 .title {
@@ -87,7 +98,7 @@
   }
 }
 
-.grid {
+.gridCards {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,7 +147,7 @@
 }
 
 @media (max-width: 600px) {
-  .grid {
+  .gridCards {
     width: 100%;
     flex-direction: column;
   }

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import TypewriterComponent from 'typewriter-effect';
+import Particles from 'react-tsparticles';
 import cx from 'classnames';
 
 import { Header } from '../components/Header';
@@ -14,8 +15,126 @@ const Home: NextPage = () => {
       <Head>
         <title>Home | Vinícius Alves</title>
       </Head>
-
       <Header />
+      <section className={styles.particlesContainer}>
+        <Particles
+          params={{
+            background: {
+              position: '50% 50%',
+              repeat: 'no-repeat',
+              size: 'cover',
+            },
+            fullScreen: {
+              enable: true,
+              zIndex: 1,
+            },
+            interactivity: {
+              events: {
+                onClick: {
+                  enable: true,
+                  mode: 'push',
+                },
+                onHover: {
+                  enable: true,
+                  mode: 'repulse',
+                  parallax: {
+                    force: 60,
+                  },
+                },
+              },
+              modes: {
+                bubble: {
+                  distance: 400,
+                  duration: 2,
+                  opacity: 0.8,
+                  size: 40,
+                },
+                grab: {
+                  distance: 400,
+                },
+              },
+            },
+            particles: {
+              color: {
+                value: '#3178c6',
+              },
+              links: {
+                color: {
+                  value: '#ffffff',
+                },
+                distance: 150,
+                enable: true,
+                opacity: 0.4,
+              },
+              move: {
+                attract: {
+                  rotate: {
+                    x: 600,
+                    y: 1200,
+                  },
+                },
+                enable: true,
+              },
+              number: {
+                density: {
+                  enable: true,
+                },
+                value: 80,
+              },
+              opacity: {
+                value: {
+                  min: 0.1,
+                  max: 0.5,
+                },
+                animation: {
+                  enable: true,
+                  speed: 1,
+                  minimumValue: 0.1,
+                },
+              },
+              shape: {
+                type: 'circle',
+              },
+              size: {
+                value: 3,
+                animation: {
+                  speed: 17,
+                  minimumValue: 10,
+                },
+              },
+              stroke: {
+                width: 1,
+                color: {
+                  value: '#ffffff',
+                  animation: {
+                    h: {
+                      count: 0,
+                      enable: false,
+                      offset: 0,
+                      speed: 1,
+                      sync: true,
+                    },
+                    s: {
+                      count: 0,
+                      enable: false,
+                      offset: 0,
+                      speed: 1,
+                      sync: true,
+                    },
+                    l: {
+                      count: 0,
+                      enable: false,
+                      offset: 0,
+                      speed: 1,
+                      sync: true,
+                    },
+                  },
+                },
+              },
+            },
+          }}
+        />
+      </section>
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <strong>my Website!</strong>
@@ -63,7 +182,7 @@ const Home: NextPage = () => {
 
         <button className={styles.contactMe}>contate-me</button>
 
-        <div className={styles.grid}>
+        <section className={styles.gridCards}>
           <a
             href='https://www.linkedin.com/in/viniciusalvesdefaria/'
             className={styles.card}
@@ -87,23 +206,7 @@ const Home: NextPage = () => {
               novidades.
             </p>
           </a>
-
-          {/* <a
-            href='https://github.com/vercel/next.js/tree/master/examples'
-            className={styles.card}>
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}>
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a> */}
-        </div>
+        </section>
       </main>
 
       <Footer />
