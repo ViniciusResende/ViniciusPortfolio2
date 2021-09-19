@@ -6,18 +6,30 @@ import { Footer } from '../../components/Footer';
 
 import styles from './About.module.scss';
 
-export const About = () => {
+const About = () => {
   return (
     <div className={styles.container}>
       <Header />
       <main className={styles.content}>
         <aside className={styles.pictureContainer}>
-          <Image
-            src='/images/ViniciusPic.jpeg'
-            alt='Foto Vinicius Alves'
-            width={500}
-            height={500}
-          />
+          <div className={styles.flipBoxInner}>
+            <div className={styles.imageFront}>
+              <Image
+                src='/images/ViniciusBonecoDeNeve.jpeg'
+                alt='Foto Vinicius Alves'
+                width={500}
+                height={500}
+              />
+            </div>
+            <div className={styles.imageBack}>
+              <Image
+                src='/images/ViniciusPic.jpeg'
+                alt='Foto Vinicius Alves'
+                width={500}
+                height={500}
+              />
+            </div>
+          </div>
         </aside>
 
         <aside className={styles.descriptionContainer}>
@@ -48,3 +60,5 @@ export const About = () => {
     </div>
   );
 };
+
+export default About;

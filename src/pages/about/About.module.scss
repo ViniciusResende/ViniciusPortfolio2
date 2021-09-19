@@ -3,9 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  height: 100%;
-  min-height: 100vh;
 }
 
 .content {
@@ -16,7 +13,8 @@
 
   gap: 250px;
 
-  padding: 3.5rem 0;
+  height: 100%;
+  min-height: 80vh;
 
   @media (max-width: 1377px) {
     gap: 150px;
@@ -32,6 +30,35 @@
 }
 
 .pictureContainer {
+  background-color: transparent;
+  width: 500px;
+  height: 500px;
+  perspective: 1000px;
+
+  &:hover {
+    .flipBoxInner {
+      transform: rotateY(180deg);
+    }
+  }
+}
+
+.flipBoxInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.imageFront,
+.imageBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
   > div {
     border: 2px solid var(--primary-blue);
     border-radius: 50%;
@@ -40,6 +67,10 @@
       border-radius: 50%;
     }
   }
+}
+
+.imageBack {
+  transform: rotateY(180deg);
 }
 
 .descriptionContainer {
