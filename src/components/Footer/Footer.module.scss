@@ -1,0 +1,59 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.375rem, 1fr));
+  grid-gap: 4.25rem;
+
+  width: 100%;
+  margin: auto;
+
+  background: var(--secondary-black);
+  padding: 3rem 5rem;
+}
+
+.contentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.4s ease;
+
+    &:hover {
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+  }
+
+  p {
+    color: var(--text);
+
+    strong {
+      color: var(--primary-red);
+    }
+  }
+}
+
+.iconContainer {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contactIcon {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--primary-white);
+  cursor: pointer;
+  margin-bottom: 1rem;
+
+  transition: fill 0.2s ease-in;
+
+  &:hover {
+    fill: var(--text-light);
+  }
+}
