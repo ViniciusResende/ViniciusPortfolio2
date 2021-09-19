@@ -9,7 +9,7 @@ import styles from './About.module.scss';
 
 const About = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Head>
         <title>About | Vinícius Alves</title>
       </Head>
@@ -63,7 +63,7 @@ const About = () => {
         </aside>
       </main>
       <Footer />
-    </div>
+    </section>
   );
 };
 

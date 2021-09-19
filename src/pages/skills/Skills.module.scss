@@ -1,0 +1,122 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--secondary-white);
+  width: 100%;
+  padding: 40px 0;
+
+  > h2 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+}
+
+.cardsContainer {
+  width: 85%;
+  margin: 4rem 0;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  grid-gap: 4.25rem;
+}
+
+.card {
+  height: 25rem;
+  max-width: 18.75rem;
+  width: 100%;
+
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+
+  background: var(--primary-white);
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: background 0.4s ease, transform 0.4s ease;
+
+  cursor: default;
+
+  > h4 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+
+    position: relative;
+    top: -8px;
+  }
+
+  > p {
+    color: var(--text);
+    text-align: justify;
+    margin: 0.5rem 0;
+
+    transition: color 0.4s ease;
+  }
+
+  &::before {
+    content: ' ';
+    display: block;
+    background-color: var(--primary-black);
+    height: 0.1875rem;
+    width: 100%;
+
+    top: 100%;
+    line-height: 0;
+    position: relative;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+  }
+
+  &:hover {
+    background: var(--primary-hover-blue);
+    transform: translateY(-1rem);
+
+    > p {
+      color: var(--primary-white);
+    }
+
+    .iconContainer {
+      background: var(--primary-black);
+
+      > svg {
+        fill: var(--primary-white);
+      }
+    }
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.iconContainer {
+  width: 3rem;
+  height: 3rem;
+  background: var(--primary-blue);
+  border-radius: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+  top: -40px;
+
+  transition: background 0.4s ease;
+
+  > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--primary-black);
+
+    transition: fill 0.4s ease;
+  }
+}

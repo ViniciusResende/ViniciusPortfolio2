@@ -11,7 +11,7 @@ import styles from '../styles/Home/Home.module.scss';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <Head>
         <title>Home | Vinícius Alves</title>
       </Head>
@@ -210,7 +210,7 @@ const Home: NextPage = () => {
       </main>
 
       <Footer />
-    </div>
+    </section>
   );
 };
 
