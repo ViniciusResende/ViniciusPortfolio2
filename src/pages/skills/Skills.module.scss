@@ -18,6 +18,10 @@
   > h2 {
     font-size: 3rem;
     font-weight: normal;
+
+    @media (max-width: 420px) {
+      margin: 0 20px;
+    }
   }
 }
 
