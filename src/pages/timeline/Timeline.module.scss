@@ -11,9 +11,15 @@
   align-items: center;
   justify-content: center;
 
-  padding: 5rem 0;
+  padding: 3rem 0;
   max-width: 720px;
   margin: 0 2rem;
+
+  > h2 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+  }
 }
 
 .timelineCard {
@@ -22,7 +28,7 @@
   padding: 1rem 2rem;
   border-left: 3px solid var(--text-light);
   > h2 {
-    font-weight: 400;
+    font-weight: normal;
     color: var(--primary-blue);
     text-shadow: 0.5px 0.5px 4px var(--primary-hover-blue);
   }

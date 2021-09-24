@@ -38,6 +38,7 @@ const Timeline = () => {
       </Head>
       <Header />
       <main className={styles.content}>
+        <h2>Minha Trajetória</h2>
         {timelineArray.map((item) => (
           <div key={item.year} className={styles.timelineCard}>
             <h2>{item.year}</h2>
