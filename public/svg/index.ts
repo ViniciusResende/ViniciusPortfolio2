@@ -1,4 +1,5 @@
 import BarsIcon from './bars-solid.svg';
+import ArrowIcon from './arrow.svg';
 import LinkedinIcon from './linkedin.svg';
 import GitHubIcon from './github.svg';
 import InstagramIcon from './instagram.svg';
@@ -17,6 +18,7 @@ import KubernetsIcon from './kubernets.svg';
 
 export {
   BarsIcon,
+  ArrowIcon,
   LinkedinIcon,
   GitHubIcon,
   InstagramIcon,
