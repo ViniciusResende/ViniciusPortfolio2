@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { getNextApiUrl } from '../../utils';
 
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Layout } from '../../components/Layout';
 import { Slider } from '../../components/Slider';
 
 import styles from './Projects.module.scss';
@@ -41,11 +39,7 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
   }, []);
 
   return (
-    <section className={styles.container}>
-      <Head>
-        <title>Projects | Vinícius Alves</title>
-      </Head>
-      <Header />
+    <Layout title='Projects'>
       <main className={styles.content}>
         <h2>Meus Projetos</h2>
         <Slider
@@ -69,8 +63,7 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
           ))}
         </Slider>
       </main>
-      <Footer />
-    </section>
+    </Layout>
   );
 };
 
