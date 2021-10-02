@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id": "1",
+      "name": "Podcastr 2.0",
+      "description": "Uma plataforma que visa prover um ótimo espaço para que pessoas que são interessadas em escutar podcasts dos melhores desenvolvedores, possa fazê-lo.",
+      "img": "/images/projects/Podcastrlogo.svg"
+    },
+    {
+      "id": "2",
+      "name": "RIVPR",
+      "description": "É uma aplicação que permite aos usuários reportarem problemas em sua região, assim as entidades governamentais poderão ver mais facilmente os problemas com a cidade e resolverem eles o quanto antes.",
+      "img": "/images/projects/RIVPRLogo.png"
+    },
+    {
+      "id": "3",
+      "name": "Let me Ask",
+      "description": "Uma plataforma feita para que perguntas possam ser feitas para um palestrante de forma anônima ou não em tempo real, criando mais interatividade com os ouvintes.",
+      "img": "/images/projects/LetMeAskLogo.svg"
+    },
+    {
+      "id": "4",
+      "name": "Time To Moveit",
+      "description": "É uma aplicação que permite aos usuários usar um contador regressivo que irá enviar uma notificação para o usuário quando a contagem terminar, e então disponibilizará uma exercício para ser feito.",
+      "img": "/images/projects/TimeToMoveitLogo.svg"
+    },
+    {
+      "id": "5",
+      "name": "Scarab",
+      "description": "Scarab é um rede social onde você pode fazer um post que pode receber likes e comentários de outros usuários, interagindo em tempo real com várias pessoas.",
+      "img": "/images/projects/ScarabLogo.png"
+    },
+    {
+      "id": "6",
+      "name": "Plant Manager",
+      "description": "Uma aplicação para seu celular que pode te ajudar você a gerenciar suas plantas em casa, onde você pode ver várias informações úteis sobre cada tipo de planta e agendar os horários de regà-las.",
+      "img": "/images/projects/PlantManager.png"
+    }
+  ]
+}
