@@ -1,8 +1,6 @@
 import React from 'react';
-import Head from 'next/head';
 
-import { Header } from '../../components/Header';
-import { Footer } from '../../components/Footer';
+import { Layout } from '../../components/Layout';
 
 import styles from './Timeline.module.scss';
 
@@ -31,11 +29,7 @@ const Timeline = () => {
   ];
 
   return (
-    <section className={styles.container}>
-      <Head>
-        <title>Timeline | Vinícius Alves</title>
-      </Head>
-      <Header />
+    <Layout title='Timeline'>
       <main className={styles.content}>
         <h2>Minha Trajetória</h2>
         {timelineArray.map((item) => (
@@ -45,8 +39,7 @@ const Timeline = () => {
           </div>
         ))}
       </main>
-      <Footer />
-    </section>
+    </Layout>
   );
 };
 
