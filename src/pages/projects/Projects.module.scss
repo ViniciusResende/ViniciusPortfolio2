@@ -19,10 +19,14 @@
   > h2 {
     font-size: 3rem;
     font-weight: normal;
+  }
 
-    @media (max-width: 420px) {
-      margin: 0 20px;
-    }
+  @media (max-width: 1420px) {
+    padding: 40px 20px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 40px 0;
   }
 }
 

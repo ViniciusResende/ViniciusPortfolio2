@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -24,6 +24,22 @@ type ProjectsProps = {
 };
 
 const Projects = ({ projectsArray }: ProjectsProps) => {
+  const [slidesQuantity, setSlidesQuantity] = useState(3);
+
+  const onResize = () => {
+    if (window.innerWidth < 850) setSlidesQuantity(1);
+    else if (window.innerWidth < 1255) setSlidesQuantity(2);
+    else setSlidesQuantity(3);
+  };
+
+  useEffect(() => {
+    addEventListener('resize', onResize);
+
+    return function cleanUp() {
+      removeEventListener('resize', onResize);
+    };
+  }, []);
+
   return (
     <section className={styles.container}>
       <Head>
@@ -32,7 +48,10 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
       <Header />
       <main className={styles.content}>
         <h2>Meus Projetos</h2>
-        <Slider className={styles.slider} delay={10000} slidesToShow={3}>
+        <Slider
+          className={styles.slider}
+          delay={10000}
+          slidesToShow={slidesQuantity}>
           {projectsArray.map((item) => (
             <Link key={item.id} href={`/projects/${item.id}`} passHref>
               <div className={styles.projectCard}>
