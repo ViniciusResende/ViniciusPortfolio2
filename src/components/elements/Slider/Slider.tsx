@@ -1,10 +1,10 @@
 import React, { Children, useCallback, useEffect, useState } from 'react';
 import cx from 'classnames';
 
-import { getUniqueId } from '../../utils';
-import { useInterval } from '../../hooks';
+import { getUniqueId } from '../../../utils';
+import { useInterval } from '../../../hooks';
 
-import { ArrowIcon } from '../../../public/svg';
+import { ArrowIcon } from '../../../../public/svg';
 import styles from './Slider.module.scss';
 
 type SliderProps = {

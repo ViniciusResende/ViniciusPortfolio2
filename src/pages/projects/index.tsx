@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { getNextApiUrl } from '../../utils';
 
 import { Layout } from '../../components/Layout';
-import { Slider } from '../../components/Slider';
+import { Slider } from '../../components/elements/Slider';
 
 import styles from './Projects.module.scss';
 import { GetStaticProps } from 'next';
