@@ -12,7 +12,7 @@
   background-color: var(--support-dark);
   padding: 0.5rem 1rem;
 
-  z-index: 1030;
+  z-index: 10;
 }
 
 .content {
@@ -47,10 +47,14 @@
   width: 100%;
   max-width: 950px;
 
-  a {
+  a,
+  button {
     color: var(--primary-white);
     text-transform: uppercase;
+    font-size: 1rem;
+    font-family: 'PT Sans', sans-serif;
 
+    cursor: pointer;
     transition: color 0.2s ease-in;
 
     &::before {

@@ -1,33 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import cx from 'classnames';
 
-import { getNextApiUrl } from '../../utils';
-import { Loader } from '../Loader';
+import MenuItems from './menuItems.json';
+
+import { useContact } from '../../hooks';
 
 import { BarsIcon } from '../../../public/svg';
 import styles from './Header.module.scss';
 
-type MenuItemData = {
-  name: string;
-  path: string | null;
-};
-
 export const Header = () => {
-  const [menuItems, setMenuItems] = useState<MenuItemData[]>();
+  const { handleControlModalOpenness } = useContact();
+
   const [isCollapsed, setIsCollapsed] = useState(true);
-
-  useEffect(() => {
-    async function getMenuItems() {
-      const response = await fetch(`${getNextApiUrl()}/menu`);
-      const menuItems: MenuItemData[] = await response.json();
-
-      setMenuItems(menuItems);
-    }
-
-    getMenuItems();
-  }, []);
 
   return (
     <header className={styles.container}>
@@ -51,17 +37,17 @@ export const Header = () => {
           className={cx(styles.navigation, {
             [styles.collapsed]: isCollapsed,
           })}>
-          {menuItems ? (
-            <>
-              {menuItems.map((item) => (
-                <span key={item.name} onClick={() => setIsCollapsed(true)}>
-                  <Link href={item.path || ''}>{item.name}</Link>
-                </span>
-              ))}
-            </>
-          ) : (
-            <Loader />
-          )}
+          {MenuItems.items.map((item) => (
+            <span key={item.name} onClick={() => setIsCollapsed(true)}>
+              {item.path ? (
+                <Link href={item.path || ''}>{item.name}</Link>
+              ) : (
+                <button onClick={() => handleControlModalOpenness(true)}>
+                  {item.name}
+                </button>
+              )}
+            </span>
+          ))}
         </nav>
       </div>
     </header>
