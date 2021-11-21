@@ -1,14 +1,16 @@
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import TypewriterComponent from 'typewriter-effect';
 import Particles from 'react-tsparticles';
 import cx from 'classnames';
 
+import { useContact } from '../hooks';
 import { Layout } from '../components/Layout';
 
 import styles from '../styles/Home/Home.module.scss';
 
 const Home: NextPage = () => {
+  const { handleControlModalOpenness } = useContact();
+
   return (
     <Layout title='Home'>
       <div className={styles.content}>
@@ -176,7 +178,11 @@ const Home: NextPage = () => {
             />
           </p>
 
-          <button className={styles.contactMe}>contate-me</button>
+          <button
+            className={styles.contactMe}
+            onClick={() => handleControlModalOpenness(true)}>
+            contate-me
+          </button>
 
           <section className={styles.gridCards}>
             <a
