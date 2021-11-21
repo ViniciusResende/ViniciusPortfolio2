@@ -59,8 +59,8 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 
-  > div {
-    border: 2px solid var(--primary-blue);
+  > span {
+    border: 2px solid var(--primary-blue) !important;
     border-radius: 50%;
     img {
       padding: 3px !important;
