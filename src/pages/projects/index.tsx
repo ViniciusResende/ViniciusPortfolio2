@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { getNextApiUrl } from '../../utils';
+import { useResize } from '../../hooks';
 
 import { Layout } from '../../components/Layout';
 import { Slider } from '../../components/elements/Slider';
@@ -23,20 +24,14 @@ type ProjectsProps = {
 
 const Projects = ({ projectsArray }: ProjectsProps) => {
   const [slidesQuantity, setSlidesQuantity] = useState(3);
+  function onResize() {
+    const windowWidth = window.innerWidth;
 
-  const onResize = () => {
-    if (window.innerWidth < 850) setSlidesQuantity(1);
-    else if (window.innerWidth < 1255) setSlidesQuantity(2);
+    if (windowWidth < 850) setSlidesQuantity(1);
+    else if (windowWidth < 1255) setSlidesQuantity(2);
     else setSlidesQuantity(3);
-  };
-
-  useEffect(() => {
-    addEventListener('resize', onResize);
-
-    return function cleanUp() {
-      removeEventListener('resize', onResize);
-    };
-  }, []);
+  }
+  useResize(onResize);
 
   return (
     <Layout title='Projects'>
