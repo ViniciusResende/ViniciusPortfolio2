@@ -4,6 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &.small {
+    max-width: 30px;
+  }
 }
 
 .elementOut {
@@ -30,6 +34,17 @@
     }
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  &.small {
+    width: 30px;
+    height: 30px;
+
+    &::after {
+      width: 24px;
+      height: 24px;
+      border-width: 3px;
     }
   }
 }
@@ -60,6 +75,19 @@
     }
     100% {
       transform: rotate(0deg);
+    }
+  }
+
+  &.small {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    right: 6px;
+
+    &::after {
+      width: 18px;
+      height: 18px;
+      border-width: 2px;
     }
   }
 }
