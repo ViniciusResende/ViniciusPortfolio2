@@ -1,0 +1,1 @@
+export { ModalContact } from './ModalContact';
