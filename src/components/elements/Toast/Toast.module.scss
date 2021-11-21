@@ -1,0 +1,110 @@
+.default {
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  min-height: 72px;
+  max-height: 150px;
+  padding: 0 12px;
+
+  &.success {
+    background-color: var(--primary-green);
+  }
+
+  &.fail {
+    background-color: var(--primary-red);
+  }
+}
+
+.toastIcon {
+  fill: var(--primary-white);
+
+  width: 100%;
+  max-width: 20px;
+  margin: 0 5px 0 10px;
+
+  &.fail {
+    max-width: 15px;
+  }
+}
+
+.message {
+  color: var(--primary-white);
+  font-size: 14px;
+  letter-spacing: 0.4px;
+  line-height: 16px;
+  width: 100%;
+  padding: 16px 0;
+  margin-left: 15px;
+}
+
+.buttonClose {
+  background-color: transparent;
+  flex-grow: 1;
+  align-self: flex-start;
+
+  padding: 0;
+  margin: 12px 0 0 12px;
+  width: 100%;
+  max-width: 10px;
+
+  cursor: pointer;
+
+  > svg {
+    fill: var(--primary-white);
+    cursor: pointer;
+    transition: fill 0.2s ease;
+
+    &:hover {
+      fill: var(--secondary-white);
+    }
+  }
+}
+
+@keyframes slideUpwards {
+  0% {
+    bottom: -35%;
+  }
+  100% {
+    bottom: 10px;
+  }
+}
+
+.isMobilePositioning {
+  bottom: -35%;
+  animation: slideUpwards 0.5s 0.5s forwards;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  width: 317px;
+
+  &.isAboutToClose {
+    bottom: 10px;
+    animation: slideUpwards, slideUpwards 0.5s reverse forwards;
+  }
+}
+
+@keyframes slideForwards {
+  0% {
+    right: -35%;
+  }
+  100% {
+    right: 40px;
+  }
+}
+
+.defaultPositioning {
+  position: fixed;
+  right: -35%;
+  top: 200px;
+  width: 30%;
+  max-width: 450px;
+  z-index: 16;
+
+  animation: slideForwards 0.5s 0.5s forwards;
+
+  &.isAboutToClose {
+    right: 40px;
+    animation: slideForwards, slideForwards 0.5s reverse forwards;
+  }
+}

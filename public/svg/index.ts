@@ -1,7 +1,9 @@
 import BarsIcon from './bars-solid.svg';
 import ArrowIcon from './arrow.svg';
 import TriangleIcon from './triangle-left.svg';
+import CloseXIcon from './times.svg';
 import CloseIcon from './times-circle.svg';
+import CheckIcon from './check.svg';
 import LinkedinIcon from './linkedin.svg';
 import GitHubIcon from './github.svg';
 import InstagramIcon from './instagram.svg';
@@ -31,7 +33,9 @@ export {
   BarsIcon,
   ArrowIcon,
   TriangleIcon,
+  CloseXIcon,
   CloseIcon,
+  CheckIcon,
   LinkedinIcon,
   GitHubIcon,
   InstagramIcon,
