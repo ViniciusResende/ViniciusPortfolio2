@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 import { Footer } from '../Footer';
 import { Header } from '../Header';
+import { ModalContact } from '../ModalContact';
 
 import styles from './Layout.module.scss';
 
@@ -17,6 +18,7 @@ export const Layout = ({ title, children }: LayoutProps) => {
       <Head>
         <title>{title} | Vinícius Alves</title>
       </Head>
+      <ModalContact />
       <Header />
       {children}
       <Footer />
