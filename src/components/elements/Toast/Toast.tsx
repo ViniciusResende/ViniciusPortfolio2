@@ -30,6 +30,7 @@ export const Toast = ({
     }, timeToClose);
 
     setTimeout(handleEndTimer, timeToClose + 500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleEndTimer() {

@@ -31,6 +31,7 @@ export const Slider = ({
 
   useEffect(() => {
     if (!delayState) setDelayState(delay);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlide]);
 
   useInterval(() => {
