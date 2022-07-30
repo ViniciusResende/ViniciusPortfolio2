@@ -93,6 +93,8 @@ const Project = ({ project }: ProjectProps) => {
             </Link>
           )}
           <div className={styles.bannerBG} style={{
+            //ts-ignored because the api value is controlled by inter code
+            //@ts-ignore
             background: `linear-gradient(90deg, ${projectsCoverColors[project.key] || '#3178c6'} 0%, rgba(51,51,51,1) 100%)`,
           }}>
             <h1>{project.name}</h1>
