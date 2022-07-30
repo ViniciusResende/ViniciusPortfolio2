@@ -1,0 +1,168 @@
+{
+  "1": {
+    "key": "podcastr",
+    "name": "Podcastr 2.0",
+    "description": "A aplicação Podcastr foi desenvolvida em um evento brasileiro de aprendizado de programação conhecido como Next Level Week, essa aplicação em especial foi desenvolvida na Trilha React da quinta edição do evento. O meu objetivo realizando o curso era de ganhar mais familiariadade com o universo do front-end e, principalmente, me capacitar para uma vaga profissional como desenvolvedor front-end. Nessa aplicação tive contato com o NextJs, React, TypeScript e Sass. Usando essas ferramentas fui capaz de desenvolver, em um curso intensivo de uma semana, uma aplicação completa. A aplicaçào é um portal para escutar podcasts sobre programação, contendo um player de áudio próprio com várias customizações para a ordem de reprodução entre outras coisas. Após terminar o curso, sempre gosto de adicionar novas features por mim mesmo para solidificar o conhecimento, por isso, adicionei a opção de Dark Mode para a aplicação, implementei responsividade e a configurei como um PWA, dessa forma a aplicação poderia se comportar como um aplicativo em um smartfone, além disso, após todas essas mudanças, renomeei-a dando o nome de Podcast 2.0.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "NextJs",
+        "icon": "next"
+      },
+      {
+        "name": "React",
+        "icon": "react"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      },
+      {
+        "name": "Sass",
+        "icon": "sass"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/Podcastr2.0",
+    "linkedinPost": "https://www.linkedin.com/posts/viniciusalvesdefaria_neverstoplearning-jornadainfinita-reactjs-activity-6795297937309212672-DJqa"
+  },
+  "2": {
+    "key": "rivpr",
+    "name": "RIVPR",
+    "description": "O aplicativo RIVPR(Regional Issue Vizualizer and Problems Report) foi desenvolvido por mim como um Trabalho de Conclusão de Curso para minha formação como Técnico de Informática na Universidade Federal de Viçosa em 2020. Desenvolver o aplicativo foi uma decisão ousada que tive para criar uma aplicação Fullstack do zero usando as tecnologias mais atuais do mercado, por isso, para essa aplicação, utilizei o NodeJs com express e SQLite3 no back-end e React Native e Expo para desenvolver a interface mobile do app, como linguagem, utilizei o consolidado JavaScript em ambos back-end e mobile. A aplicação foi criada com o intuíto de ser uma interface unificada para moradores de uma determinada cidade, reportarem os problemas, principalmente de infraestrutura, por meio do aplicativo, utilizando de foto, descrição e localidade para reportarem o problema. Ademais, outros usuários podem interagir com os problemas reportados, adicionando comentários, concordando com o status atual ou discordando. O aplicativo foi desenvolvido de forma a ser meu primeiro contato com a programação mais avançada, perdendo o sentito unicamente acadêmico que tinha tido contado até então, portanto, o aplicativo tem as características de um programador dando seus primeiros passos.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "React Native",
+        "icon": "react"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript"
+      },
+      {
+        "name": "Expo",
+        "icon": "expo"
+      },
+      {
+        "name": "NodeJs",
+        "icon": "nodejs"
+      },
+      {
+        "name": "Express",
+        "icon": "express"
+      },
+      {
+        "name": "SQLite3",
+        "icon": "sqlite"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/RIVPR"
+  },
+  "3": {
+    "key": "let_me_ask",
+    "name": "Let Me Ask",
+    "description": "A aplicação Podcastr foi desenvolvida em um evento brasileiro de aprendizado de programação conhecido como Next Level Week, essa aplicação em especial foi desenvolvida na Trilha React da edição ‘together’(6° edição) do evento. O meu objetivo realizando o curso era de consolidar-me com o universo do front-end. Nessa aplicação tive contato com o React, TypeScript, Sass e, principalmente, Firebase. Usando essas ferramentas fui capaz de desenvolver, em um curso intensivo de uma semana, uma aplicação serveless completa. A aplicação é um portal para que um administrador possa criar uma sala em que diversos usuários podem interagir, fazendo perguntas, anônimas ou não, para o administrador, esse pode colocar as perguntas em HighLight, marcá-las como respondidas e até excluí-las, com um login integrado com o Google Accounts, a utilização é facilitada. Após terminar o curso, sempre gosto de adicionar novas features por mim mesmo para solidificar o conhecimento, por isso, adicionei a opção de Dark Mode para a aplicação, implementei responsividade e adicionei a feature de perguntas anônimas.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "React",
+        "icon": "react"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      },
+      {
+        "name": "Sass",
+        "icon": "sass"
+      },
+      {
+        "name": "Firebase",
+        "icon": "firebase"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/letmeask"
+  },
+  "4": {
+    "key": "time_to_moveit",
+    "name": "Time To Moveit",
+    "description": "A aplicação Time To Moveit foi desenvolvida durante o evento de aprendizado intensivo de programação conhecido como Next Level Week, mas especificamente, a aplicação foi retratada na trilha de desenvolvimento Front-end da edição 4 do evento. A aplicação tem como objetivo a criação de uma plataforma gameficada para a utilização da técnica de pomodoro do dia a dia, de forma interativa, é possível iniciar um timer que que ficará contanto de segundo em segundo, esse tempo é destinado para o desenvolvimento de alguma atividade que exija foco do usuário, após o término desse contador, o usuário será notificado por meio de push notifications sobre o tempo ter acabado, e nesse momento uma atividade de exercício físico, motor ou mental será exibida, ao concluir a atividade o usuário ganhará níveis de experiência e estará apto a começar o novo timer. Desenvolver essa aplicação foi uma excelente oportunidade para melhorar minhas habilidades com o Next.js, React, TypeScript e CSS. Após o término da aplicação desenvolvida no período do curso, me preocupei em desenvolver novas features para fixar o conteúdo, por isso, criei uma página de login onde pode-se fazer login via google e facebook, além disso, a plataforma apresenta responsividade a todos os dispositivos, ademais, adicionei a opção de usar o darkmode na aplicação.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "NextJs",
+        "icon": "next"
+      },
+      {
+        "name": "React",
+        "icon": "react"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/TimeToMoveIt",
+    "linkedinPost": "https://www.linkedin.com/posts/viniciusalvesdefaria_nlw4-react-reactjs-activity-6773376682519883776-Qpqv"
+  },
+  "5": {
+    "key": "scarab",
+    "name": "Scarab",
+    "description": "Scarab foi um projeto desenvolvido por mim que teve como intúito o aprendizado do desenvolvimento de software em um âmbito Fullstack, isto é, me preocupei em desenvolver uma aplicação desde a contrução do banco de dados e back-end, até a criação de interfaces e integração com o back-end. A aplicação é uma espécie de rede social no estilo twitter, e utiliza diversas tecnologias no seu desenvolvimento, dessa forma, pude apliar o escopo de conhecimentos que foram requeridos para desenvolver o app. Como bando de dados, utilizei o mais famoso banco não relacional, o MongoDB, para interagir com o banco utilizei o NodeJs para  o desenvolvimento back-end. Em adição, me preocupei em implementar o GraphQL, dessa forma o front-end tem uma versatilidade muito maior para comunicar-se com o back-end e fazer requisições de dados. Para o front-end, utilizei a tecnologia Apollo para conseguir extrair o máximo da minha implementação de GraphQL, para a construção de interfaces utilizei o próprio React com o auxílio da biblioteca Styled Components. Como linguagem de programação, preferi seguir com o JavaScript puro, tanto no back-end quanto no front-end.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "React",
+        "icon": "react"
+      },
+      {
+        "name": "JavaScript",
+        "icon": "javascript"
+      },
+      {
+        "name": "Styled Components",
+        "icon": "styledComponents"
+      },
+      {
+        "name": "Apollo",
+        "icon": "apollographql"
+      },
+      {
+        "name": "GraphQL",
+        "icon": "graphql"
+      },
+      {
+        "name": "NodeJs",
+        "icon": "nodejs"
+      },
+      {
+        "name": "MongoDB",
+        "icon": "mongo"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/Scarab",
+    "linkedinPost": "https://www.linkedin.com/posts/viniciusalvesdefaria_neverstoplearning-boostyourself-reactjs-activity-6785306177875140608-Zr5C"
+  },
+  "6": {
+    "key": "plant_manager",
+    "name": "Plant Manager",
+    "description": "A aplicação Plant Manager foi desenvolvida por mim no evento de programação Next Level Week, mais especificamente na sua quinta edição na trilha de desenvolvimento mobile com React Native. A aplicação tem como objetivo ser uma plataforma unificada para o gerenciamento de plantas, dessa forma, é possível cadastrar diversos tipos de plantas na plataforma e obter informações preciosas sobre cada tipo. Ao cadastrar uma planta, você pode escolher um determinado horário para regá-la, e o App, automaticamente, irá marcar os horários diários para regar as plantas, sempre que for esse horário, o usuário será notificado por meio de push notifications. Como forma de solidificar meus conhecimentos obtidos desenvolvendo a aplicação com React Native, TypeScript e Expo, resolvi colocar uma funcionalidade extra no aplicativo, adicionei a opção de Dark Mode para o App, sendo assim, pode proporcionar um experiência mais agradável para um determinado tipo de usuário.",
+    "img": "/images/projects/Podcastrlogo.svg",
+    "technologies": [
+      {
+        "name": "React Native",
+        "icon": "react"
+      },
+      {
+        "name": "TypeScript",
+        "icon": "typescript"
+      },
+      {
+        "name": "Expo",
+        "icon": "expo"
+      }
+    ],
+    "githubRepo": "https://github.com/ViniciusResende/PlantManager",
+    "linkedinPost": "https://www.linkedin.com/posts/viniciusalvesdefaria_reactnative-typescript-missioncompleated-activity-6795788486634041344-1KdE"
+  }
+}

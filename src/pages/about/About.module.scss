@@ -22,9 +22,10 @@
 
   @media (max-width: 1194px) {
     flex-direction: column;
+    padding: 16px 0;
   }
 
-  @media (max-width: 558px) {
+  @media (max-width: 640px) {
     gap: 50px;
   }
 }
@@ -39,6 +40,12 @@
     .flipBoxInner {
       transform: rotateY(180deg);
     }
+  }
+
+  @media (max-width: 640px) {
+    width: 300px;
+    height: 300px;
+    perspective: 600px;
   }
 }
 

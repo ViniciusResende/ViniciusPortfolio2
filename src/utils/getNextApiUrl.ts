@@ -1,6 +1,6 @@
 const getNextApiUrl = () =>
   process.env.NODE_ENV === 'production'
-    ? `${document.location.protocol}//${document.location.hostname}/api`
-    : `${document.location.protocol}//${document.location.hostname}:${document.location.port}/api`;
+    ? `${window.location.protocol}//${window.location.hostname}/api`
+    : `http://localhost:3000/api`;
 
 export default getNextApiUrl;

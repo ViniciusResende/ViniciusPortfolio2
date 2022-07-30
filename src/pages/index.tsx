@@ -145,7 +145,7 @@ const Home: NextPage = () => {
           </h3>
 
           <h2 className={cx(styles.title, styles.secondary)}>
-            Atualmente sou um <strong>Desenvolvedor Frontend Junior</strong> e
+            Atualmente sou um <strong>Desenvolvedor Frontend</strong> e
             um <strong>Estudante Entusiasmado</strong>
           </h2>
 
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
             <TypewriterComponent
               onInit={(typewriter) => {
                 typewriter
-                  .typeString('Junior Frontend Developer')
+                  .typeString('Frontend Developer')
                   .pauseFor(2500)
                   .deleteAll()
                   .typeString('Web Development')

@@ -15,10 +15,10 @@ export const Footer = () => {
           viniciusfariaresende@gmail.com
         </a>
         <a
-          href='https://goo.gl/maps/vUiUXWWaG5XuEvwE6'
+          href='https://goo.gl/maps/VTVVVJbhxChdM6mw5'
           target='_blank'
           rel='noreferrer'>
-          Contagem, Minas Gerais, Brasil
+          Belo Horizonte, Minas Gerais, Brasil
         </a>
         <a href='tel:+5531984033879' target='_blank' rel='noreferrer'>
           +55 (31) 98403-3879
@@ -49,7 +49,7 @@ export const Footer = () => {
             <GitHubIcon className={styles.contactIcon} />
           </a>
           <a
-            href='https://www.instagram.com/viniziu.alves/?hl=pt-br'
+            href='https://www.instagram.com/viniciusfariaresende/?hl=pt-br'
             target='_blank'
             rel='noreferrer'>
             <InstagramIcon className={styles.contactIcon} />

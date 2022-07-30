@@ -1,0 +1,205 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary-white);
+  width: 100%;
+  padding: 40px 0;
+  gap: 2rem;
+
+  > header {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1025px;
+    width: 100%;
+    > nav {
+      width: 25px;
+
+      cursor: pointer;
+      > svg {
+        fill: var(--support-darker);
+
+        &:hover {
+          fill: var(--text);
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 40px 20px;
+  }
+}
+
+.thumbnailContainer {
+  position: relative;
+
+  img {
+    border-radius: 1rem;
+  }
+
+  .bannerBG {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 1rem;
+
+    width: 100%;
+    height: 228px;
+    min-width: 1000px;
+
+    > h1 {
+      font-size: 3rem;
+      color: var(--support-light);
+      text-shadow: 0.5px 0 var(--support-dark), 0.5px 0 var(--support-dark), 0 -1.5px var(--support-dark), 0 -0.5px var(--support-dark), 0.5px 0.5px var(--support-dark), -0.5px -0.5px var(--support-dark), 0.5px -0.5px var(--support-dark), -0.5px 0.5px var(--support-dark)
+    }
+
+    @media (max-width: 1024px) {
+      min-width: 90vw;
+    }
+  }
+
+  button {
+    font-size: 0;
+    position: absolute;
+    background: var(--primary-blue);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+    border: 0;
+
+    transition: background 0.2s;
+    z-index: 5;
+    cursor: pointer;
+
+    &.goBackButton {
+      left: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @media (max-width: 420px) {
+        left: 6px;
+      }
+    }
+
+    &.goFowardButton {
+      right: 0;
+      top: 50%;
+      transform: translate(50%, -50%);
+      > svg {
+        transform: rotate(180deg);
+      }
+
+      @media (max-width: 420px) {
+        right: 6px;
+      }
+    }
+
+    &:hover {
+      background-color: var(--primary-hover-blue);
+    }
+  }
+}
+
+.divisoryLine {
+  width: 100%;
+  max-width: 1000px;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--support-light);
+}
+
+.descriptionParagraph {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: justify;
+  color: var(--text);
+
+  width: 100%;
+  max-width: 1000px;
+}
+
+.technologiesContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(38px, 1fr));
+  grid-gap: 4.25rem;
+
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+
+.technologie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  margin: 0 auto;
+
+  > svg {
+    max-width: 38px;
+    width: 100%;
+    max-height: 38px;
+    height: 100%;
+  }
+
+  > strong {
+    text-align: center;
+  }
+}
+
+.findProject {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &.onlyOneChild {
+    justify-content: center;
+  }
+
+  width: 100%;
+  max-width: 500px;
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+
+    > svg {
+      max-width: 64px;
+      width: 100%;
+      max-height: 64px;
+      height: 100%;
+      transition: fill 0.2s ease-in;
+    }
+
+    > strong {
+      font-size: 18px;
+      line-height: 32px;
+      transition: color 0.2s ease-in;
+    }
+
+    &:hover {
+      > svg {
+        fill: var(--text);
+      }
+
+      > strong {
+        color: var(--text);
+      }
+    }
+  }
+}

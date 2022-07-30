@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -32,6 +32,10 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
     else setSlidesQuantity(3);
   }
   useResize(onResize);
+
+  useEffect(() => {
+    onResize();
+  }, [])
 
   return (
     <Layout title='Projects'>
