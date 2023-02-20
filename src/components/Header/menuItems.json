@@ -21,10 +21,6 @@
       "path": "/projects"
     },
     {
-      "name": "Networkings",
-      "path": "/networkings"
-    },
-    {
       "name": "Contact",
       "path": null
     }

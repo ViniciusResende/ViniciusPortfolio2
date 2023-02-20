@@ -1,12 +1,8 @@
 import React from 'react';
 import cx from 'classnames';
-import { ParsedUrlQuery } from 'querystring';
-import { GetStaticPaths, GetStaticProps } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import { getNextApiUrl } from '../../../utils';
 import { ProjectData } from '../../../utils/types';
 import {
   ArrowIcon,
@@ -30,13 +26,10 @@ import {
 } from '../../../../public/svg';
 import { Layout } from '../../../components/Layout';
 
+import projectsDataArray from './projects.json';
 import styles from './Project.module.scss';
 
-type ProjectProps = {
-  project: ProjectData;
-};
-
-const Project = ({ project }: ProjectProps) => {
+const Project = () => {
   const technologies = {
     react: <ReactIcon style={{ fill: '#61DAFB' }} />,
     next: <NextJsIcon />,
@@ -60,12 +53,17 @@ const Project = ({ project }: ProjectProps) => {
     let_me_ask: '#f159f9',
     time_to_moveit: '#5965e0',
     scarab: '#49ff0c',
-    plant_manager: '#00c063'
+    plant_manager: '#00c063',
   };
 
   const router = useRouter();
   const { projectId } = router.query;
   const NumberProjectId = Number(projectId);
+  const stringProjectId = projectId as '1' | '2' | '3' | '4' | '5' | '6';
+
+  const project = projectsDataArray[stringProjectId] as ProjectData;
+
+  console.log('hello', stringProjectId, project);
 
   return (
     <Layout title={project.name}>
@@ -92,11 +90,15 @@ const Project = ({ project }: ProjectProps) => {
               </button>
             </Link>
           )}
-          <div className={styles.bannerBG} style={{
-            //ts-ignored because the api value is controlled by inter code
-            //@ts-ignore
-            background: `linear-gradient(90deg, ${projectsCoverColors[project.key] || '#3178c6'} 0%, rgba(51,51,51,1) 100%)`,
-          }}>
+          <div
+            className={styles.bannerBG}
+            style={{
+              background: `linear-gradient(90deg, ${
+                //ts-ignored because the value is controlled by inter code
+                //@ts-ignore
+                projectsCoverColors[project.key] || '#3178c6'
+              } 0%, rgba(51,51,51,1) 100%)`,
+            }}>
             <h1>{project.name}</h1>
           </div>
         </div>
@@ -132,44 +134,6 @@ const Project = ({ project }: ProjectProps) => {
       </main>
     </Layout>
   );
-};
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const array = ['1', '2', '3', '4', '5', '6'];
-
-  const paths = array.map((projectId) => {
-    return { params: { projectId: projectId } };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-type Props = {
-  project: ProjectData;
-};
-
-interface Params extends ParsedUrlQuery {
-  projectId: string;
-}
-
-export const getStaticProps: GetStaticProps<Props, Params> = async ({
-  params,
-}) => {
-  const projectId = params?.projectId;
-
-  const response = await fetch(
-    `${getNextApiUrl()}/project?projectId=${projectId}`,
-  );
-  const project: ProjectData = await response.json();
-
-  return {
-    props: {
-      project,
-    },
-  };
 };
 
 export default Project;

@@ -8,8 +8,8 @@ import { useResize } from '../../hooks';
 import { Layout } from '../../components/Layout';
 import { Slider } from '../../components/elements/Slider';
 
+import allProjectsArrayJson from './allProjects.json';
 import styles from './Projects.module.scss';
-import { GetStaticProps } from 'next';
 
 type ProjectData = {
   id: string;
@@ -18,11 +18,9 @@ type ProjectData = {
   img: string;
 };
 
-type ProjectsProps = {
-  projectsArray: ProjectData[];
-};
+const Projects = () => {
+  const projectsArray: ProjectData[] = allProjectsArrayJson.items;
 
-const Projects = ({ projectsArray }: ProjectsProps) => {
   const [slidesQuantity, setSlidesQuantity] = useState(3);
   function onResize() {
     const windowWidth = window.innerWidth;
@@ -35,7 +33,7 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
 
   useEffect(() => {
     onResize();
-  }, [])
+  }, []);
 
   return (
     <Layout title='Projects'>
@@ -64,17 +62,6 @@ const Projects = ({ projectsArray }: ProjectsProps) => {
       </main>
     </Layout>
   );
-};
-
-export const getStaticProps: GetStaticProps = async () => {
-  const response = await fetch(`${getNextApiUrl()}/projects`);
-  const projectsArray: ProjectData[] = await response.json();
-
-  return {
-    props: {
-      projectsArray,
-    },
-  };
 };
 
 export default Projects;
