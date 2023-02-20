@@ -63,8 +63,6 @@ const Project = () => {
 
   const project = projectsDataArray[stringProjectId] as ProjectData;
 
-  console.log('hello', stringProjectId, project);
-
   return (
     <Layout title={project.name}>
       <main className={styles.content}>
