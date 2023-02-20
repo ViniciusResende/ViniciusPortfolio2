@@ -61,7 +61,9 @@ const Project = () => {
   const NumberProjectId = Number(projectId);
   const stringProjectId = projectId as '1' | '2' | '3' | '4' | '5' | '6';
 
-  const project = projectsDataArray[stringProjectId] as ProjectData;
+  const project = (projectsDataArray[stringProjectId] as ProjectData) || {
+    technologies: [],
+  };
 
   return (
     <Layout title={project.name}>
